@@ -1,0 +1,18 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}UX Collection test{% endblock %}
+
+{% block body %}
+
+    <div class="container">
+        <h1>Bootstrap 4</h1>
+        <div class="row">
+            <div class="col-sm-6">
+                {{ form(form_simple) }}
+            </div>
+            <div class="col-sm-6">
+                {{ form(form_complex) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
