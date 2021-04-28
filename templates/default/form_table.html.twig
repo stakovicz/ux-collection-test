@@ -1,11 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}UX Collection test{% endblock %}
+{% block title %}Form Table UX Collection demo{% endblock %}
 
 {% block body %}
-
+    {% form_theme form_simple 'form_table_layout.html.twig' %}
+    {% form_theme form_complex 'form_table_layout.html.twig' %}
     <div class="container">
-        <h1>Bootstrap 4</h1>
+        <h1>Form Table</h1>
         <div class="row">
             <div class="col-sm-6">
                 {{ form(form_simple) }}

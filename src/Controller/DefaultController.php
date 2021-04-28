@@ -13,11 +13,25 @@ use Symfony\Component\Routing\Annotation\Route;
 class DefaultController extends AbstractController
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/", name="bootstrap4")
      */
-    public function index(): Response
+    public function bootstrap4(): Response
     {
+        $parameters = $this->prepareParameters();
+        return $this->render('default/bootstrap_4.html.twig', $parameters);
+    }
 
+    /**
+     * @Route("/form_table", name="form_table")
+     */
+    public function formTable(): Response
+    {
+        $parameters = $this->prepareParameters();
+        return $this->render('default/form_table.html.twig', $parameters);
+    }
+
+    private function prepareParameters(): array
+    {
         $formSimple = $this->createFormBuilder([
                 'emails' => [
                     'email-1@example.com',
@@ -28,6 +42,9 @@ class DefaultController extends AbstractController
                 'entry_type' => EmailType::class,
                 'allow_add' => true,
                 'allow_delete' => true,
+                'attr' => [
+                    'data-controller' => 'mycollection',
+                ],
                 'button_add' => [
                     'text' => 'Add an email',
                     'attr' => ['class' => 'btn btn-primary']
@@ -51,10 +68,10 @@ class DefaultController extends AbstractController
             ])
             ->getForm();
 
-        return $this->render('default/index.html.twig', [
+        return [
             'form_simple' => $formSimple->createView(),
             'form_complex' => $formComplex->createView(),
-        ]);
+        ];
     }
 
 }

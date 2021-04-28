@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Bootstrap 4 UX Collection demo{% endblock %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+{% endblock stylesheets %}
+
+{% block body %}
+    {% form_theme form_simple 'bootstrap_4_layout.html.twig' %}
+    {% form_theme form_complex 'bootstrap_4_layout.html.twig' %}
+
+    <div class="container">
+        <h1>Bootstrap 4</h1>
+        <div class="row">
+            <div class="col-sm-6">
+                {{ form(form_simple) }}
+            </div>
+            <div class="col-sm-6">
+                {{ form(form_complex) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
