@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "09f2394b3355ddaa13eff6fcc67fc638",
+    "content-hash": "6aa19bcd6974681ff1031b6e33ea2808",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1999,16 +1999,10 @@
         {
             "name": "stakovicz/ux-collection",
             "version": "dev-main",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/stakovicz/ux-collection.git",
-                "reference": "b3668c9ceb2bd1d7a80c70b36c87759ec9ca73c7"
-            },
             "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/stakovicz/ux-collection/zipball/b3668c9ceb2bd1d7a80c70b36c87759ec9ca73c7",
-                "reference": "b3668c9ceb2bd1d7a80c70b36c87759ec9ca73c7",
-                "shasum": ""
+                "type": "path",
+                "url": "../ux-collection",
+                "reference": "976e8c94505fc41ac9de26bd19e47eaa2c5f8190"
             },
             "require": {
                 "php": ">=7.2.5",
@@ -2023,7 +2017,6 @@
                 "symfony/twig-bundle": "^4.4.17|^5.0",
                 "symfony/var-dumper": "^4.4.17|^5.0"
             },
-            "default-branch": true,
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
@@ -2048,11 +2041,9 @@
             "keywords": [
                 "ux-collection"
             ],
-            "support": {
-                "source": "https://github.com/stakovicz/ux-collection/tree/main",
-                "issues": "https://github.com/stakovicz/ux-collection/issues"
-            },
-            "time": "2021-04-27T18:59:33+00:00"
+            "transport-options": {
+                "relative": true
+            }
         },
         {
             "name": "symfony/asset",
@@ -6373,89 +6364,6 @@
                 }
             ],
             "time": "2021-01-27T10:15:41+00:00"
-        },
-        {
-            "name": "symfony/ux-dropzone",
-            "version": "v1.2.0",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/symfony/ux-dropzone.git",
-                "reference": "ed111ac22abe6c174aa788603c5f573471083e2e"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/symfony/ux-dropzone/zipball/ed111ac22abe6c174aa788603c5f573471083e2e",
-                "reference": "ed111ac22abe6c174aa788603c5f573471083e2e",
-                "shasum": ""
-            },
-            "require": {
-                "php": ">=7.2.5",
-                "symfony/config": "^4.4.17|^5.0",
-                "symfony/dependency-injection": "^4.4.17|^5.0",
-                "symfony/form": "^4.4.17|^5.0",
-                "symfony/http-kernel": "^4.4.17|^5.0"
-            },
-            "require-dev": {
-                "symfony/framework-bundle": "^4.4.17|^5.0",
-                "symfony/phpunit-bridge": "^5.2",
-                "symfony/twig-bundle": "^4.4.17|^5.0",
-                "symfony/var-dumper": "^4.4.17|^5.0"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "1.1-dev"
-                },
-                "thanks": {
-                    "name": "symfony/ux",
-                    "url": "https://github.com/symfony/ux"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Symfony\\UX\\Dropzone\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "MIT"
-            ],
-            "authors": [
-                {
-                    "name": "Titouan Galopin",
-                    "email": "galopintitouan@gmail.com"
-                },
-                {
-                    "name": "Symfony Community",
-                    "homepage": "https://symfony.com/contributors"
-                }
-            ],
-            "description": "File input dropzones for Symfony Forms",
-            "homepage": "https://symfony.com",
-            "keywords": [
-                "symfony-ux"
-            ],
-            "support": {
-                "source": "https://github.com/symfony/ux-dropzone/tree/v1.2.0"
-            },
-            "funding": [
-                {
-                    "url": "https://symfony.com/sponsor",
-                    "type": "custom"
-                },
-                {
-                    "url": "https://github.com/fabpot",
-                    "type": "github"
-                },
-                {
-                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
-                    "type": "tidelift"
-                }
-            ],
-            "time": "2021-02-01T14:18:56+00:00"
         },
         {
             "name": "symfony/validator",
