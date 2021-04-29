@@ -8,8 +8,14 @@
 {% endblock stylesheets %}
 
 {% block body %}
-    {% form_theme form_simple 'bootstrap_4_layout.html.twig' %}
-    {% form_theme form_complex 'bootstrap_4_layout.html.twig' %}
+    {% form_theme form_simple with [
+        'bootstrap_4_layout.html.twig',
+        '@UXCollection/form_theme_div.html.twig'
+    ] %}
+    {% form_theme form_complex with [
+        'bootstrap_4_layout.html.twig',
+        '@UXCollection/form_theme_div.html.twig'
+    ] %}
 
     <div class="container">
         <h1>Bootstrap 4</h1>

@@ -3,8 +3,15 @@
 {% block title %}Form Table UX Collection demo{% endblock %}
 
 {% block body %}
-    {% form_theme form_simple 'form_table_layout.html.twig' %}
-    {% form_theme form_complex 'form_table_layout.html.twig' %}
+    {% form_theme form_simple with [
+        'form_table_layout.html.twig',
+        '@UXCollection/form_theme_table.html.twig'
+    ] %}
+    {% form_theme form_complex with [
+        'form_table_layout.html.twig',
+        '@UXCollection/form_theme_table.html.twig'
+    ] %}
+
     <div class="container">
         <h1>Form Table</h1>
         <div class="row">

@@ -866,7 +866,7 @@
     rimraf "^3.0.2"
 
 "@stakovicz/ux-collection@file:vendor/stakovicz/ux-collection/Resources/assets":
-  version "0.0.1"
+  version "0.0.4"
 
 "@stimulus/core@^2.0.0":
   version "2.0.0"

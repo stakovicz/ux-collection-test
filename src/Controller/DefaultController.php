@@ -5,7 +5,9 @@ namespace App\Controller;
 use App\Form\CustomerType;
 use Stakovicz\UXCollection\Form\UXCollectionType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -59,9 +61,19 @@ class DefaultController extends AbstractController
         $formComplex = $this->createFormBuilder([
                 'customers' => [
                     ['givenName' => 'John']
+                ],
+                'customers_old' => [
+                    ['givenName' => 'Pierre'],
+                    ['givenName' => 'Paul'],
                 ]
             ])
+            ->add('street_address', TextType::class)
             ->add('customers', UXCollectionType::class, [
+                'entry_type' => CustomerType::class,
+                'allow_add' => true,
+                'allow_delete' => false
+            ])
+            ->add('customers_old', CollectionType::class, [
                 'entry_type' => CustomerType::class,
                 'allow_add' => true,
                 'allow_delete' => false
