@@ -2,13 +2,10 @@
 
 namespace App\Controller;
 
-use App\Form\CustomerType;
-use Stakovicz\UXCollection\Form\UXCollectionType;
+use App\Form\SimpleType;
+use App\Form\ComplexType;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-use Symfony\Component\Form\Extension\Core\Type\CollectionType;
-use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Form\Extension\Core\Type\TextType;
-use Symfony\Component\Form\FormInterface;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -17,73 +14,48 @@ class DefaultController extends AbstractController
     /**
      * @Route("/", name="bootstrap4")
      */
-    public function bootstrap4(): Response
+    public function bootstrap4(Request $request): Response
     {
-        $parameters = $this->prepareParameters();
-        return $this->render('default/bootstrap_4.html.twig', $parameters);
+        return $this->action($request, 'default/bootstrap_4.html.twig');
     }
 
     /**
      * @Route("/form_table", name="form_table")
      */
-    public function formTable(): Response
+    public function formTable(Request $request): Response
     {
-        $parameters = $this->prepareParameters();
-        return $this->render('default/form_table.html.twig', $parameters);
+        return $this->action($request, 'default/form_table.html.twig');
     }
 
-    private function prepareParameters(): array
+    private function action(Request $request, string $template): Response
     {
-        $formSimple = $this->createFormBuilder([
-                'emails' => [
-                    'email-1@example.com',
-                    'email-2@example.com',
-                ]
-            ])
-            ->add('emails', UXCollectionType::class, [
-                'entry_type' => EmailType::class,
-                'allow_add' => true,
-                'allow_delete' => true,
-                'attr' => [
-                    'data-controller' => 'mycollection',
-                ],
-                'button_add' => [
-                    'text' => 'Add an email',
-                    'attr' => ['class' => 'btn btn-primary']
-                ],
-                'button_delete' => [
-                    'text' => 'Remove this email',
-                    'attr' => ['class' => 'btn btn-secondary']
-                ],
-            ])
-            ->getForm();
+        $formSimple = $this->createForm(SimpleType::class, [
+            'emails' => [
+                'email-1@example.com',
+                'email-2@example.com',
+            ]
+        ], [
+            'attr' => ['novalidate' => 'novalidate']
+        ]);
 
-        $formComplex = $this->createFormBuilder([
-                'customers' => [
-                    ['givenName' => 'John']
-                ],
-                'customers_old' => [
-                    ['givenName' => 'Pierre'],
-                    ['givenName' => 'Paul'],
-                ]
-            ])
-            ->add('street_address', TextType::class)
-            ->add('customers', UXCollectionType::class, [
-                'entry_type' => CustomerType::class,
-                'allow_add' => true,
-                'allow_delete' => false
-            ])
-            ->add('customers_old', CollectionType::class, [
-                'entry_type' => CustomerType::class,
-                'allow_add' => true,
-                'allow_delete' => false
-            ])
-            ->getForm();
+        $formComplex = $this->createForm(ComplexType::class, [
+            'customers' => [
+                ['givenName' => 'John', 'familyName' => 'Doe']
+            ],
+            'customers_old' => [
+                ['givenName' => 'Pierre'],
+                ['givenName' => 'Paul'],
+            ]
+        ], [
+            'attr' => ['novalidate' => 'novalidate']
+        ]);
 
-        return [
+        $formSimple->handleRequest($request);
+        $formComplex->handleRequest($request);
+
+        return $this->render($template, [
             'form_simple' => $formSimple->createView(),
             'form_complex' => $formComplex->createView(),
-        ];
+        ]);
     }
-
 }
