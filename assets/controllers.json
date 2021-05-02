@@ -1,6 +1,6 @@
 {
     "controllers": {
-        "@stakovicz/ux-collection": {
+        "@symfony/ux-form-collection": {
             "collection": {
                 "enabled": true,
                 "fetch": "eager"

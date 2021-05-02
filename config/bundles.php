@@ -11,5 +11,5 @@ return [
     Symfony\Bundle\SecurityBundle\SecurityBundle::class => ['all' => true],
     Twig\Extra\TwigExtraBundle\TwigExtraBundle::class => ['all' => true],
     Symfony\WebpackEncoreBundle\WebpackEncoreBundle::class => ['all' => true],
-    Stakovicz\UXCollection\UXCollectionBundle::class => ['all' => true],
+    Symfony\UX\FormCollection\FormCollectionBundle::class => ['all' => true],
 ];

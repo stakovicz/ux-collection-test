@@ -104,9 +104,6 @@
             "config/packages/sensio_framework_extra.yaml"
         ]
     },
-    "stakovicz/ux-collection": {
-        "version": "0.0.1-dev"
-    },
     "symfony/asset": {
         "version": "v5.2.4"
     },
@@ -434,6 +431,9 @@
     },
     "symfony/twig-pack": {
         "version": "v1.0.1"
+    },
+    "symfony/ux-form-collection": {
+        "version": "0.0.4-dev"
     },
     "symfony/validator": {
         "version": "4.3",

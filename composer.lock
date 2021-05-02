@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "6aa19bcd6974681ff1031b6e33ea2808",
+    "content-hash": "4e06c2558290eb00d2da9e9f6670518c",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -1995,55 +1995,6 @@
                 "source": "https://github.com/sensiolabs/SensioFrameworkExtraBundle/tree/v5.6.1"
             },
             "time": "2020-08-25T19:10:18+00:00"
-        },
-        {
-            "name": "stakovicz/ux-collection",
-            "version": "dev-main",
-            "dist": {
-                "type": "path",
-                "url": "../ux-collection",
-                "reference": "976e8c94505fc41ac9de26bd19e47eaa2c5f8190"
-            },
-            "require": {
-                "php": ">=7.2.5",
-                "symfony/config": "^4.4.17|^5.0",
-                "symfony/dependency-injection": "^4.4.17|^5.0",
-                "symfony/form": "^4.4.17|^5.0",
-                "symfony/http-kernel": "^4.4.17|^5.0"
-            },
-            "require-dev": {
-                "symfony/framework-bundle": "^4.4.17|^5.0",
-                "symfony/phpunit-bridge": "^5.2",
-                "symfony/twig-bundle": "^4.4.17|^5.0",
-                "symfony/var-dumper": "^4.4.17|^5.0"
-            },
-            "type": "symfony-bundle",
-            "extra": {
-                "branch-alias": {
-                    "dev-main": "0.0.1-dev"
-                }
-            },
-            "autoload": {
-                "psr-4": {
-                    "Stakovicz\\UXCollection\\": ""
-                },
-                "exclude-from-classmap": [
-                    "/Tests/"
-                ]
-            },
-            "authors": [
-                {
-                    "name": "Stakovicz",
-                    "email": "albin.kester@gmail.com"
-                }
-            ],
-            "description": "UX Collection for Symfony Forms",
-            "keywords": [
-                "ux-collection"
-            ],
-            "transport-options": {
-                "relative": true
-            }
         },
         {
             "name": "symfony/asset",
@@ -6366,6 +6317,58 @@
             "time": "2021-01-27T10:15:41+00:00"
         },
         {
+            "name": "symfony/ux-form-collection",
+            "version": "dev-main",
+            "dist": {
+                "type": "path",
+                "url": "../ux-form-collection",
+                "reference": "ec10a942ef10b93397d4151f3ffbbd21436d7884"
+            },
+            "require": {
+                "php": ">=7.2.5",
+                "symfony/config": "^4.4.17|^5.0",
+                "symfony/dependency-injection": "^4.4.17|^5.0",
+                "symfony/form": "^4.4.17|^5.0",
+                "symfony/http-kernel": "^4.4.17|^5.0"
+            },
+            "require-dev": {
+                "symfony/framework-bundle": "^4.4.17|^5.0",
+                "symfony/phpunit-bridge": "^5.2",
+                "symfony/twig-bundle": "^4.4.17|^5.0",
+                "symfony/var-dumper": "^4.4.17|^5.0"
+            },
+            "type": "symfony-bundle",
+            "extra": {
+                "branch-alias": {
+                    "dev-main": "0.0.4-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\UX\\FormCollection\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stakovicz",
+                    "email": "albin.kester@gmail.com"
+                }
+            ],
+            "description": "UX Form Collection for Symfony Forms",
+            "keywords": [
+                "ux-form-collection"
+            ],
+            "transport-options": {
+                "relative": true
+            }
+        },
+        {
             "name": "symfony/validator",
             "version": "v5.2.6",
             "source": {
@@ -7743,7 +7746,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
-        "stakovicz/ux-collection": 20
+        "symfony/ux-form-collection": 20
     },
     "prefer-stable": true,
     "prefer-lowest": false,
