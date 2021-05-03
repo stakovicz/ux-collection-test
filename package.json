@@ -1,7 +1,7 @@
 {
   "devDependencies": {
-    "@stakovicz/ux-collection": "file:vendor/stakovicz/ux-collection/Resources/assets",
     "@symfony/stimulus-bridge": "symfony/stimulus-bridge",
+    "@symfony/ux-form-collection": "file:vendor/symfony/ux-form-collection/Resources/assets",
     "@symfony/webpack-encore": "^1.1.2",
     "sass": "^1.32.8",
     "sass-loader": "^11.0.0",
