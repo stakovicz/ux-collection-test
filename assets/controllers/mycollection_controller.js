@@ -3,7 +3,6 @@ import { Controller } from 'stimulus';
 
 export default class extends Controller {
     connect() {
-        console.log('mycollection');
         this.element.addEventListener('form-collection:pre-connect', this._log);
         this.element.addEventListener('form-collection:connect', this._log);
         this.element.addEventListener('form-collection:pre-add', this._log);
