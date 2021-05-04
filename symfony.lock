@@ -433,7 +433,7 @@
         "version": "v1.0.1"
     },
     "symfony/ux-form-collection": {
-        "version": "0.0.4-dev"
+        "version": "1.0-dev"
     },
     "symfony/validator": {
         "version": "4.3",

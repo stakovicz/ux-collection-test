@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "4e06c2558290eb00d2da9e9f6670518c",
+    "content-hash": "0b0eb41556185aae1485c7d5c273c22f",
     "packages": [
         {
             "name": "composer/package-versions-deprecated",
@@ -6321,8 +6321,8 @@
             "version": "dev-main",
             "dist": {
                 "type": "path",
-                "url": "../ux-form-collection",
-                "reference": "ec10a942ef10b93397d4151f3ffbbd21436d7884"
+                "url": "../ux/src/FormCollection",
+                "reference": "a28623774f51c8495c16b4730323857a2db11b09"
             },
             "require": {
                 "php": ">=7.2.5",
@@ -6340,7 +6340,11 @@
             "type": "symfony-bundle",
             "extra": {
                 "branch-alias": {
-                    "dev-main": "0.0.4-dev"
+                    "dev-main": "1.0-dev"
+                },
+                "thanks": {
+                    "name": "symfony/ux",
+                    "url": "https://github.com/symfony/ux"
                 }
             },
             "autoload": {
@@ -6357,11 +6361,17 @@
             "authors": [
                 {
                     "name": "Stakovicz",
-                    "email": "albin.kester@gmail.com"
+                    "email": "stakovicz@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
                 }
             ],
             "description": "UX Form Collection for Symfony Forms",
+            "homepage": "https://symfony.com",
             "keywords": [
+                "symfony-ux",
                 "ux-form-collection"
             ],
             "transport-options": {
