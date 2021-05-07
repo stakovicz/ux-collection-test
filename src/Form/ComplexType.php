@@ -2,7 +2,7 @@
 
 namespace App\Form;
 
-use Symfony\UX\FormCollection\Form\CollectionType as UXCollectionType;
+use Symfony\UX\FormCollection\Form\UXCollectionType;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\CollectionType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
@@ -22,7 +22,13 @@ class ComplexType extends AbstractType
                 'allow_delete' => false,
                 'constraints' => [
                     new Valid()
-                ]
+                ],
+                'button_add' => [
+                    'class' => 'btn btn-outline-primary'
+                ],
+                'button_delete' => [
+                    'class' => 'btn btn-outline-secondary'
+                ],
             ])
             ->add('embed', UXCollectionType::class, [
                 'entry_type' => CustomerType::class,
@@ -30,7 +36,13 @@ class ComplexType extends AbstractType
                 'allow_delete' => false,
                 'constraints' => [
                     new Valid()
-                ]
+                ],
+                'button_add' => [
+                    'class' => 'btn btn-outline-primary'
+                ],
+                'button_delete' => [
+                    'class' => 'btn btn-outline-secondary'
+                ],
             ])
             ->add('customers_old', CollectionType::class, [
                 'entry_type' => CustomerType::class,
