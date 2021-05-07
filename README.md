@@ -1,12 +1,17 @@
+This project is for testing Symfony UX Collection.
+
+## Usage
+
+### 1. Run the server
 
     symfony server:start
 
+### 2. Watch assets
 
     yarn watch
 
-Pour compiler le JS :
-- cd symfony/ux-form-collection/Resources/assets/ && yarn build --watch
-- yarn install --force && yarn dev
+### 3. Try implementation
 
+- Bootstrap 4 : https://127.0.0.1:8000/
+- Form table : https://127.0.0.1:8000/form_table
 
-Ajouter les attributs que ce soit le maximum paramétrable
