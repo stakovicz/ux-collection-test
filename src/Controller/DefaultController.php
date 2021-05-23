@@ -11,8 +11,17 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class DefaultController extends AbstractController
 {
+
     /**
-     * @Route("/", name="bootstrap4")
+     * @Route("/", name="manual")
+     */
+    public function manual(Request $request): Response
+    {
+        return $this->action($request, 'default/manual.html.twig');
+    }
+
+    /**
+     * @Route("/form_div", name="bootstrap4")
      */
     public function bootstrap4(Request $request): Response
     {
