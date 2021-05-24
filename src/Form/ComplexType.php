@@ -23,12 +23,8 @@ class ComplexType extends AbstractType
                 'constraints' => [
                     new Valid()
                 ],
-                'button_add' => [
-                    'class' => 'btn btn-outline-primary'
-                ],
-                'button_delete' => [
-                    'class' => 'btn btn-outline-secondary'
-                ],
+                'button_add_class' => 'btn btn-outline-primary',
+                'button_delete_class' => 'btn btn-outline-secondary',
             ])
             ->add('embed', UXCollectionType::class, [
                 'entry_type' => CustomerType::class,
@@ -37,12 +33,8 @@ class ComplexType extends AbstractType
                 'constraints' => [
                     new Valid()
                 ],
-                'button_add' => [
-                    'class' => 'btn btn-outline-primary'
-                ],
-                'button_delete' => [
-                    'class' => 'btn btn-outline-secondary'
-                ],
+                'button_add_class' => 'btn btn-outline-primary',
+                'button_delete_class' => 'btn btn-outline-secondary',
             ])
             ->add('customers_old', CollectionType::class, [
                 'entry_type' => CustomerType::class,

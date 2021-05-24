@@ -30,14 +30,10 @@ class SimpleType extends AbstractType
                 'constraints' => [
                     new Valid()
                 ],
-                'button_add' => [
-                    'text' => 'Add an email',
-                    'class' => 'btn btn-primary'
-                ],
-                'button_delete' => [
-                    'text' => 'Remove this email',
-                    'class' => 'btn btn-secondary'
-                ],
+                'button_add_text' => 'Add an email',
+                'button_add_class' => 'btn btn-primary',
+                'button_delete_text' => 'Remove this email',
+                'button_delete_class' => 'btn btn-secondary',
             ])
             ->add('submit', SubmitType::class)
         ;
