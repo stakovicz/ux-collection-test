@@ -15,4 +15,3 @@ This project is for testing Symfony UX Collection.
 - Manual : https://127.0.0.1:8000/
 - Bootstrap 4 : https://127.0.0.1:8000/form_div
 - Form table : https://127.0.0.1:8000/form_table
-
